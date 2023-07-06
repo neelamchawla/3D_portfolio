@@ -3,7 +3,7 @@ import {
   backend,
   creator,
   web,
-  
+
   javascript,
   typescript,
   html,
@@ -18,7 +18,7 @@ import {
   threejs,
   canva,
   // docker,
-  
+
   // meta,
   // starbucks,
   // tesla,
@@ -35,8 +35,7 @@ import {
   // tripguide,
 } from "../assets/index.js";
 
-export const navLinks = [
-  {
+export const navLinks = [{
     id: "about",
     title: "About",
   },
@@ -58,8 +57,7 @@ export const navLinks = [
   },
 ];
 
-const services = [
-  {
+const services = [{
     title: "Web Developer",
     icon: web,
   },
@@ -77,8 +75,7 @@ const services = [
   },
 ];
 
-const technologies = [
-  {
+const technologies = [{
     name: "HTML 5",
     icon: html,
   },
@@ -132,8 +129,7 @@ const technologies = [
   },
 ];
 
-const experiences = [
-  {
+const experiences = [{
     title: "Software Developer",
     company_name: "OpenEyes Technologies Inc.",
     icon: openeyes,
@@ -188,26 +184,22 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "There is no better colleague than Neelam. She is one of the most dedicated professionals I’ve worked with and is willing to put that extra help whenever you need it. Her expertise as a developer is considerable, and it helped our team come up with more efficient solutions for different projects. Her contribution was very valuable to the projects, and I highly recommend Neelam and would love to work with her again.",
+const testimonials = [{
+    testimonial: "There is no better colleague than Neelam. She is one of the most dedicated professionals I’ve worked with and is willing to put that extra help whenever you need it. Her expertise as a developer is considerable, and it helped our team come up with more efficient solutions for different projects. Her contribution was very valuable to the projects, and I highly recommend Neelam and would love to work with her again.",
     name: "Vinayak P",
     designation: "Business Analyst",
     company: "PMC",
     image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
-    testimonial:
-      "Neelam is a very hard-working person who can tackle any website-related problems with ease. We have worked together on several projects, and I found her a highly skilled and dedicated professional. Her expertise in the field of WordPress and Shopify has helped our company immensely. She’s also an all-around great person to work with! I highly recommend her to anyone looking for help on their team or any projects based on WordPress, Shopify, or React.Js.",
+    testimonial: "Neelam is a very hard-working person who can tackle any website-related problems with ease. We have worked together on several projects, and I found her a highly skilled and dedicated professional. Her expertise in the field of WordPress and Shopify has helped our company immensely. She’s also an all-around great person to work with! I highly recommend her to anyone looking for help on their team or any projects based on WordPress, Shopify, or React.Js.",
     name: "Sagar Soni",
     designation: "Performance marketing & media buying",
     company: "",
     image: "https://randomuser.me/api/portraits/men/6.jpg",
   },
   {
-    testimonial:
-      "Neelam is an incredibly productive and multi-skilled individual with extensive knowledge. Working with Neelam has been a pleasure due to her dedication to delivering outstanding results. Neelam has showcased her expertise in technologies like React and Angular for front-end development and PHP Laravel for back-end development. Our collaboration on an online Surveys Application based on React was a testament to her technical prowess and teamwork. Neelam's professionalism, expertise, and commitment make her a valuable asset to any team or project.",
+    testimonial: "Neelam is an incredibly productive and multi-skilled individual with extensive knowledge. Working with Neelam has been a pleasure due to her dedication to delivering outstanding results. Neelam has showcased her expertise in technologies like React and Angular for front-end development and PHP Laravel for back-end development. Our collaboration on an online Surveys Application based on React was a testament to her technical prowess and teamwork. Neelam's professionalism, expertise, and commitment make her a valuable asset to any team or project.",
     name: "Aaradhana Mulik",
     designation: "B2B Content | Content Marketing | Corporate Communications",
     company: "",
@@ -215,13 +207,10 @@ const testimonials = [
   },
 ];
 
-const projects = [
-  {
+const projects = [{
     name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, and manage car rentals, providing a convenient transportation.",
-    tags: [
-      {
+    description: "Web-based platform that allows users to search, and manage car rentals, providing a convenient transportation.",
+    tags: [{
         name: "react",
         color: "blue-text-gradient",
       },
@@ -239,10 +228,8 @@ const projects = [
   },
   {
     name: "Let's Do It - ThreeJs",
-    description:
-      "Web application that enables users to pick colors, choose logo and search for logo with AI generated prompt for 3D T-Shirt.",
-    tags: [
-      {
+    description: "Web application that enables users to pick colors, choose logo and search for logo with AI generated prompt for 3D T-Shirt.",
+    tags: [{
         name: "react",
         color: "blue-text-gradient",
       },
@@ -260,10 +247,8 @@ const projects = [
   },
   {
     name: "EvoGym",
-    description:
-      "A comprehensive Fitness Training platform that allows users to register to offers, curated recommendations to others.",
-    tags: [
-      {
+    description: "A comprehensive Fitness Training platform that allows users to register to offers, curated recommendations to others.",
+    tags: [{
         name: "react",
         color: "blue-text-gradient",
       },
@@ -281,4 +266,10 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects
+};

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 
@@ -27,9 +26,6 @@ const Navbar = () => {
 
   return (
     <nav
-      // ${
-      //   styles.paddingX
-      // }
       className={`
       sm:px-2 md:px-6
       w-full flex items-center pt-4 fixed -top-[28px] z-20

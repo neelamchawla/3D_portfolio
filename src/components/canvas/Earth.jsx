@@ -17,7 +17,7 @@ const EarthCanvas = () => {
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
@@ -26,7 +26,7 @@ const EarthCanvas = () => {
         far: 200,
         position: [-4, 3, 6],
       }}
-      style={{ cursor: 'grab'}}
+      style={{ cursor: "grab" }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

@@ -22,7 +22,7 @@ const Ball = (props) => {
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color='#fff8eb'
+          color="#fff8eb"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
@@ -43,11 +43,11 @@ const BallCanvas = ({ icon }) => {
   return (
     <Canvas
       // frameloop='demand'
-      frameloop='always'
+      frameloop="always"
       dpr={[1, 2]}
       shadows
       gl={{ preserveDrawingBuffer: true }}
-      style={{ cursor: 'grab'}}
+      style={{ cursor: "grab" }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -60,8 +60,7 @@ const BallCanvas = ({ icon }) => {
 
       <Preload all />
     </Canvas>
-
-);
+  );
 };
 
 export default BallCanvas;

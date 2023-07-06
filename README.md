@@ -16,7 +16,7 @@ npm install --legacy-peer-deps -D  postcss autoprefixer
 npx tailwindcss init -p
 <!-- install three for 3d computer -->
 npm install --legacy-peer-deps three
-
+npm i sweetalert2@6.6.1
 
 <!-- setup and run -->
 npm install
