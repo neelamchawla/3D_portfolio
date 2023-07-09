@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -8,10 +8,45 @@ import EarthCanvas from "./canvas/Earth.jsx";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
+
+import { useAnimeContext } from "../context/animeContext.jsx";
+import { gsap, ScrollTrigger } from "gsap/all";
 
 const Contact = () => {
+  const { setCurrentBG } = useAnimeContext();
+
   const formRef = useRef();
+  const contactRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: contactRef.current,
+        start: "+=200 70%",
+        end: "+=00 60%",
+        scrub: true,
+        pinSpacing: false,
+        onEnter: () => {
+          setCurrentBG("#1e0a55");
+          gsap.to(textRef.current, {
+            color: "#282828",
+            duration: 1,
+          });
+        },
+        onLeaveBack: () => {
+          setCurrentBG("#050816");
+          gsap.to(textRef.current, {
+            duration: 1,
+          });
+        },
+      },
+    });
+  }, [setCurrentBG]);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -35,57 +70,51 @@ const Contact = () => {
     setLoading(true);
 
     if (form.name === "" || form.email === "" || form.message === "") {
-      Swal(
-        "Please fill all the fields",
-        )
+      Swal("Please fill all the fields");
       setLoading(false);
-    }
-    else if (form.name !== "" || form.email !== "" || form.message !== "") {
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Neelam Chawla",
-          from_email: form.email,
-          to_email: "neelam.projects@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          // alert("Thank you. I will get back to you as soon as possible.");
-          Swal(
-            "Thank you for reaching out!!",
-            "I will contact you shortly.",
-            "success",
-          )
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        // eslint-disable-next-line no-unused-vars
-        (error) => {
-          setLoading(false);
-          // console.error(error);
-          // alert("Ahh!! Something went wrong. Please try again.");
-          Swal(
-            'Ahh!! Something went wrong.',
-            'Please try again.',
-            'error'
-            )
-        }
-      );
+    } else if (form.name !== "" || form.email !== "" || form.message !== "") {
+      emailjs
+        .send(
+          import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+          {
+            from_name: form.name,
+            to_name: "Neelam Chawla",
+            from_email: form.email,
+            to_email: "neelam.projects@gmail.com",
+            message: form.message,
+          },
+          import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          () => {
+            setLoading(false);
+            // alert("Thank you. I will get back to you as soon as possible.");
+            Swal(
+              "Thank you for reaching out!!",
+              "I will contact you shortly.",
+              "success"
+            );
+            setForm({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          // eslint-disable-next-line no-unused-vars
+          (error) => {
+            setLoading(false);
+            // console.error(error);
+            // alert("Ahh!! Something went wrong. Please try again.");
+            Swal("Ahh!! Something went wrong.", "Please try again.", "error");
+          }
+        );
     }
   };
 
   return (
     <div
+      ref={contactRef}
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-refresh/only-export-components */
+import { useEffect, useRef } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -8,6 +9,9 @@ import { link } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+
+import { gsap, ScrollTrigger } from "gsap/all";
+import { useAnimeContext } from "../context/animeContext.jsx";
 
 const ProjectCard = ({
   index,
@@ -79,8 +83,39 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
+  const { setCurrentBG } = useAnimeContext();
+  const projectRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: projectRef.current,
+        start: "+=200 70%",
+        end: "+=00 60%",
+        scrub: true,
+        pinSpacing: false,
+        onEnter: () => {
+          setCurrentBG("#142331");
+          gsap.to(textRef.current, {
+            color: "#d0d0d0",
+            duration: 1,
+          });
+        },
+        onLeaveBack: () => {
+          setCurrentBG("#1e0a55");
+          gsap.to(textRef.current, {
+            duration: 1,
+          });
+        },
+      },
+    });
+  }, [setCurrentBG]);
+
   return (
-    <>
+    <div ref={projectRef}>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
@@ -104,7 +139,7 @@ const Projects = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

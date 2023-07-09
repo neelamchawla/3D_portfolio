@@ -1,6 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
+import { useEffect, useRef } from "react";
+
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -8,6 +10,9 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+
+import { useAnimeContext } from "../context/animeContext.jsx";
+import { gsap, ScrollTrigger } from "gsap/all";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -53,8 +58,39 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
+  const { setCurrentBG } = useAnimeContext();
+  const aboutRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: aboutRef.current,
+        start: "+=200 70%",
+        end: "+=00 60%",
+        scrub: true,
+        pinSpacing: false,
+        onEnter: () => {
+          setCurrentBG("#1e0a55");
+          gsap.to(textRef.current, {
+            color: "#282828",
+            duration: 1,
+          });
+        },
+        onLeaveBack: () => {
+          setCurrentBG("#1d1836");
+          gsap.to(textRef.current, {
+            duration: 1,
+          });
+        },
+      },
+    });
+  }, [setCurrentBG]);
+
   return (
-    <>
+    <div ref={aboutRef}>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -77,7 +113,7 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

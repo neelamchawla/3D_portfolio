@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-refresh/only-export-components */
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -7,6 +8,9 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 import { useState } from "react";
+
+import { gsap, ScrollTrigger } from "gsap/all";
+import { useAnimeContext } from "../context/animeContext.jsx";
 
 const FeedbackCard = ({
   index,
@@ -53,6 +57,7 @@ const ReadMore = ({ children }) => {
   const toggleReadMore = () => {
     setIsReadMore(!isReadMore);
   };
+
   return (
     <p className="text">
       {isReadMore ? text.slice(0, 150) : text}
@@ -64,20 +69,49 @@ const ReadMore = ({ children }) => {
 };
 
 const Feedbacks = () => {
+  const { setCurrentBG } = useAnimeContext();
+  const feedbackRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: feedbackRef.current,
+        start: "+=200 70%",
+        end: "+=00 60%",
+        scrub: true,
+        pinSpacing: false,
+        onEnter: () => {
+          setCurrentBG("#1e0a55");
+        },
+        onLeaveBack: () => {
+          setCurrentBG("#1d1836");
+        },
+      },
+    });
+  }, [setCurrentBG]);
+
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
-      <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
-      >
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
-        </motion.div>
-      </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
+    <div ref={feedbackRef}>
+      <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+        <div
+          className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+        >
+          <motion.div variants={textVariant()}>
+            <p className={styles.sectionSubText}>What others say</p>
+            <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          </motion.div>
+        </div>
+        <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+          {testimonials.map((testimonial, index) => (
+            <FeedbackCard
+              key={testimonial.name}
+              index={index}
+              {...testimonial}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
