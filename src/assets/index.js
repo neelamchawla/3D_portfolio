@@ -19,8 +19,10 @@ import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import canva from "./tech/canva.png";
+import next from "./tech/next.png";
+import sitecore from "./tech/sitecore.png";
+// import redux from "./tech/redux.png";
+// import canva from "./tech/canva.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
@@ -30,6 +32,7 @@ import threejs from "./tech/threejs.svg";
 // import shopify from "./company/shopify.png";
 // import starbucks from "./company/starbucks.png";
 // import tesla from "./company/tesla.png";
+import horizontal from "./company/horizontal.jpg";
 import openeyes from "./company/openeyes.jfif";
 import futurelink from "./company/futurelink.jfif";
 import codezeros from "./company/codezeros.jfif";
@@ -46,7 +49,7 @@ export {
   logo,
   backend,
   creator,
-  canva,
+  // canva,
   mobile,
   web,
   github,
@@ -62,7 +65,9 @@ export {
   mongodb,
   nodejs,
   reactjs,
-  redux,
+  next,
+  sitecore,
+  // redux,
   tailwind,
   typescript,
   threejs,
@@ -70,6 +75,7 @@ export {
   // shopify,
   // starbucks,
   // tesla,
+  horizontal,
   openeyes,
   futurelink,
   codezeros,

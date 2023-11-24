@@ -9,20 +9,23 @@ import {
   html,
   css,
   reactjs,
-  redux,
+  next,
+  // redux,
   tailwind,
   nodejs,
   mongodb,
   git,
   figma,
   threejs,
-  canva,
+  sitecore,
+  // canva,
   // docker,
 
   // meta,
   // starbucks,
   // tesla,
   // shopify,
+  horizontal,
   openeyes,
   futurelink,
   codezeros,
@@ -96,9 +99,13 @@ const technologies = [{
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "NextJs",
+    icon: next,
   },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -124,12 +131,25 @@ const technologies = [{
     icon: figma,
   },
   {
-    name: "Canva",
-    icon: canva,
+    name: "Sitecore",
+    icon: sitecore,
   },
 ];
 
-const experiences = [{
+const experiences = [
+  {
+    title: "Software Developer",
+    company_name: "Horizontal Integration India Pvt Ltd",
+    icon: horizontal,
+    iconBg: "#383E56",
+    date: "Jul 2023 - Till Date",
+    points: [
+      "Developing web applications using Next.js and Sitecore SXA.",
+      "Collaborating with cross-functional teams to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+    ],
+  },
+  {
     title: "Software Developer",
     company_name: "OpenEyes Technologies Inc.",
     icon: openeyes,
@@ -184,7 +204,15 @@ const experiences = [{
   },
 ];
 
-const testimonials = [{
+const testimonials = [
+  // {
+  //   testimonial: "There is no better colleague than Neelam. She is one of the most dedicated professionals I’ve worked with and is willing to put that extra help whenever you need it. Her expertise as a developer is considerable, and it helped our team come up with more efficient solutions for different projects. Her contribution was very valuable to the projects, and I highly recommend Neelam and would love to work with her again.",
+  //   name: "Vinayak P",
+  //   designation: "Business Analyst",
+  //   company: "PMC",
+  //   image: "https://randomuser.me/api/portraits/men/1.jpg",
+  // },
+  {
     testimonial: "There is no better colleague than Neelam. She is one of the most dedicated professionals I’ve worked with and is willing to put that extra help whenever you need it. Her expertise as a developer is considerable, and it helped our team come up with more efficient solutions for different projects. Her contribution was very valuable to the projects, and I highly recommend Neelam and would love to work with her again.",
     name: "Vinayak P",
     designation: "Business Analyst",
@@ -211,11 +239,11 @@ const projects = [{
     name: "Car Rent",
     description: "Web-based platform that allows users to search, and manage car rentals, providing a convenient transportation.",
     tags: [{
-        name: "react",
+        name: "react + Ts",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "next.js",
         color: "green-text-gradient",
       },
       {
