@@ -17,6 +17,9 @@ import { useAnimeContext } from "./context/animeContext.jsx";
 import { useEffect, useState } from "react";
 import { BsArrowUp } from "react-icons/bs";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const App = () => {
   const { appRef } = useAnimeContext();
 

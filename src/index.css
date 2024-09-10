@@ -125,17 +125,26 @@
 }
 
 
-.swal2-styled.swal2-confirm>button,
+/* .swal2-styled.swal2-confirm>button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
   margin-left: 37%;
-}
+} */
 
-.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+/* .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
   right: -4em !important;
+} */
+
+.slick-list {
+  padding-left: 0.5em;
 }
 
+@media screen and (max-width: 600px) {
+  .slick-list {
+    padding-left: 5em;
+  }
+}
 
 .backToTop {
   font-family: inherit;

@@ -43,7 +43,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="logo"
-            className="min-w-[5em] w-[8em] h-28 object-contain pr-4"
+            className="min-w-[5em] w-[8em] h-28 object-contain -mr-[3em]"
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Neelam&nbsp;

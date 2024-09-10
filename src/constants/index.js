@@ -3,7 +3,6 @@ import {
   backend,
   creator,
   web,
-
   javascript,
   typescript,
   html,
@@ -30,15 +29,18 @@ import {
   futurelink,
   codezeros,
   tech,
-
   carrent,
   threejsPro,
   Vite,
+  Animato,
+  Scroller,
+  Github,
   // jobit,
   // tripguide,
 } from "../assets/index.js";
 
-export const navLinks = [{
+export const navLinks = [
+  {
     id: "about",
     title: "About",
   },
@@ -60,7 +62,8 @@ export const navLinks = [{
   },
 ];
 
-const services = [{
+const services = [
+  {
     title: "Web Developer",
     icon: web,
   },
@@ -78,7 +81,8 @@ const services = [{
   },
 ];
 
-const technologies = [{
+const technologies = [
+  {
     name: "HTML 5",
     icon: html,
   },
@@ -138,11 +142,11 @@ const technologies = [{
 
 const experiences = [
   {
-    title: "Software Developer",
+    title: "DX Engineer",
     company_name: "Horizontal Integration India Pvt Ltd",
     icon: horizontal,
     iconBg: "#383E56",
-    date: "Jul 2023 - Till Date",
+    date: "Jul 2023 - Present",
     points: [
       "Developing web applications using Next.js and Sitecore SXA.",
       "Collaborating with cross-functional teams to create high-quality products.",
@@ -150,11 +154,11 @@ const experiences = [
     ],
   },
   {
-    title: "Software Developer",
+    title: "Front End Developer",
     company_name: "OpenEyes Technologies Inc.",
     icon: openeyes,
     iconBg: "#383E56",
-    date: "Dec 2021 - Till Date",
+    date: "Dec 2021 - Jun 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -163,11 +167,11 @@ const experiences = [
     ],
   },
   {
-    title: "Software Engineer",
+    title: "Web Developer",
     company_name: "Future Link Consultants",
     icon: futurelink,
     iconBg: "#E6DEDD",
-    date: "Sep 2020 - Nov 2021",
+    date: "Sep 2017 - Nov 2021",
     points: [
       "Developing and maintaining web applications using React.js, WordPress and Shopify.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -175,59 +179,71 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  {
-    title: "Jr. Software Engineer",
-    company_name: "Codezeros Technology",
-    icon: codezeros,
-    iconBg: "#383E56",
-    date: "Jan 2020 - Aug 2020",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies such as Redux, Saga and Thunk.",
-      "Material UI, Bootstrap, Firebase, Stripe, Github are some of the other technologies were also used in the projects.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Designer",
-    company_name: "Padmavati Online Services",
-    icon: tech,
-    iconBg: "#E6DEDD",
-    date: "Jun 2017 - Feb 2019",
-    points: [
-      "Developing and maintaining web applications using PHP, Laravel, CodeIgnitor and other related technologies.",
-      "Planning site designs, functionality and navigation.",
-      "Building wireframes & prototypes which were then turned into functional and responsive digital products.",
-      "Reviewing UX with multiple teams and making necessary edits.",
-      "Handling all composition, color, illustration, typography, and branding for projects."
-    ],
-  },
+  // {
+  //   title: "Jr. Software Engineer",
+  //   company_name: "Codezeros Technology",
+  //   icon: codezeros,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2020 - Aug 2020",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies such as Redux, Saga and Thunk.",
+  //     "Material UI, Bootstrap, Firebase, Stripe, Github are some of the other technologies were also used in the projects.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
+  // {
+  //   title: "Web Designer",
+  //   company_name: "Padmavati Online Services",
+  //   icon: tech,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jun 2017 - Feb 2019",
+  //   points: [
+  //     "Developing and maintaining web applications using PHP, Laravel, CodeIgnitor and other related technologies.",
+  //     "Planning site designs, functionality and navigation.",
+  //     "Building wireframes & prototypes which were then turned into functional and responsive digital products.",
+  //     "Reviewing UX with multiple teams and making necessary edits.",
+  //     "Handling all composition, color, illustration, typography, and branding for projects."
+  //   ],
+  // },
 ];
 
 const testimonials = [
-  // {
-  //   testimonial: "There is no better colleague than Neelam. She is one of the most dedicated professionals I’ve worked with and is willing to put that extra help whenever you need it. Her expertise as a developer is considerable, and it helped our team come up with more efficient solutions for different projects. Her contribution was very valuable to the projects, and I highly recommend Neelam and would love to work with her again.",
-  //   name: "Vinayak P",
-  //   designation: "Business Analyst",
-  //   company: "PMC",
-  //   image: "https://randomuser.me/api/portraits/men/1.jpg",
-  // },
   {
-    testimonial: "There is no better colleague than Neelam. She is one of the most dedicated professionals I’ve worked with and is willing to put that extra help whenever you need it. Her expertise as a developer is considerable, and it helped our team come up with more efficient solutions for different projects. Her contribution was very valuable to the projects, and I highly recommend Neelam and would love to work with her again.",
+    testimonial:
+      "Working with Neelam on the same team has been a great experience. She is highly skilled in front-end development, especially with Next JS and Sitecore. She consistently delivers outstanding results, demonstrating excellent problem-solving skills and a commitment to achieving goals. Her professionalism, dedication, and collaborative spirit make her an invaluable asset to any project. Neelam's innovative solutions and insights greatly enhance our team's performance. I highly recommend her for any team or project!!",
+    name: "Rahul Kumawat",
+    designation: "DX Engineer",
+    company: "Horizontal Digital",
+    image: "https://randomuser.me/api/portraits/men/7.jpg",
+  },
+  {
+    testimonial:
+      "Neelam is technically very sound and always ready to take new challenges. She possesses exemplary skills pertaining to front-end development. She is a result oriented professional. She is very passionate about her work and will leave no stone unturned to achieve her goal. I wish her all the best for her future endeavors !!",
+    name: "Aalap Desai",
+    designation: "Talent Acquisition Manager",
+    company: "Horizontal Digital",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
+  },
+  {
+    testimonial:
+      "There is no better colleague than Neelam. She is one of the most dedicated professionals I’ve worked with and is willing to put that extra help whenever you need it. Her expertise as a developer is considerable, and it helped our team come up with more efficient solutions for different projects. Her contribution was very valuable to the projects, and I highly recommend Neelam and would love to work with her again.",
     name: "Vinayak P",
     designation: "Business Analyst",
     company: "PMC",
     image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
-    testimonial: "Neelam is a very hard-working person who can tackle any website-related problems with ease. We have worked together on several projects, and I found her a highly skilled and dedicated professional. Her expertise in the field of WordPress and Shopify has helped our company immensely. She’s also an all-around great person to work with! I highly recommend her to anyone looking for help on their team or any projects based on WordPress, Shopify, or React.Js.",
+    testimonial:
+      "Neelam is a very hard-working person who can tackle any website-related problems with ease. We have worked together on several projects, and I found her a highly skilled and dedicated professional. Her expertise in the field of WordPress and Shopify has helped our company immensely. She’s also an all-around great person to work with! I highly recommend her to anyone looking for help on their team or any projects based on WordPress, Shopify, or React.Js.",
     name: "Sagar Soni",
     designation: "Performance marketing & media buying",
     company: "",
     image: "https://randomuser.me/api/portraits/men/6.jpg",
   },
   {
-    testimonial: "Neelam is an incredibly productive and multi-skilled individual with extensive knowledge. Working with Neelam has been a pleasure due to her dedication to delivering outstanding results. Neelam has showcased her expertise in technologies like React and Angular for front-end development and PHP Laravel for back-end development. Our collaboration on an online Surveys Application based on React was a testament to her technical prowess and teamwork. Neelam's professionalism, expertise, and commitment make her a valuable asset to any team or project.",
+    testimonial:
+      "Neelam is an incredibly productive and multi-skilled individual with extensive knowledge. Working with Neelam has been a pleasure due to her dedication to delivering outstanding results. Neelam has showcased her expertise in technologies like React and Angular for front-end development and PHP Laravel for back-end development. Our collaboration on an online Surveys Application based on React was a testament to her technical prowess and teamwork. Neelam's professionalism, expertise, and commitment make her a valuable asset to any team or project.",
     name: "Aaradhana Mulik",
     designation: "B2B Content | Content Marketing | Corporate Communications",
     company: "",
@@ -235,15 +251,18 @@ const testimonials = [
   },
 ];
 
-const projects = [{
-    name: "Car Rent",
-    description: "Web-based platform that allows users to search, and manage car rentals, providing a convenient transportation.",
-    tags: [{
-        name: "react + Ts",
+const projects = [
+  {
+    name: "Animato",
+    description:
+      "In this project, I have introduced an innovative scrolling effect that adds a captivating and distinctive visual element.",
+    tags: [
+      {
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "next.js",
+        name: "GSAP",
         color: "green-text-gradient",
       },
       {
@@ -251,13 +270,15 @@ const projects = [{
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: Animato,
+    source_code_link: "https://animato-shoe.netlify.app/",
   },
   {
     name: "Let's Do It - ThreeJs",
-    description: "Web application that enables users to pick colors, choose logo and search for logo with AI generated prompt for 3D T-Shirt.",
-    tags: [{
+    description:
+      "Web application that enables users to pick colors, choose logo and search for logo with AI generated prompt for 3D T-Shirt.",
+    tags: [
+      {
         name: "react",
         color: "blue-text-gradient",
       },
@@ -275,8 +296,10 @@ const projects = [{
   },
   {
     name: "EvoGym",
-    description: "A comprehensive Fitness Training platform that allows users to register to offers, curated recommendations to others.",
-    tags: [{
+    description:
+      "A comprehensive Fitness Training platform that allows users to register to offers, curated recommendations to others.",
+    tags: [
+      {
         name: "react",
         color: "blue-text-gradient",
       },
@@ -292,12 +315,68 @@ const projects = [{
     image: Vite,
     source_code_link: "https://fitness-pro.pages.dev/",
   },
+  {
+    name: "Scroller",
+    description:
+      "In this project, I have introduced an innovative scrolling effect distinctive visual element.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GSAP",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: Scroller,
+    source_code_link: "https://animate-scroller.netlify.app/",
+  },
+  {
+    name: "Car Rent",
+    description:
+      "Web-based platform that allows users to search, and manage car rentals, providing a convenient transportation.",
+    tags: [
+      {
+        name: "react + Ts",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "next.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: carrent,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "More Projects....",
+    description: "Github Repo, to explore more projects.",
+    tags: [
+      {
+        name: "react + Ts",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "next.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: Github,
+    source_code_link: "https://github.com/",
+  },
 ];
 
-export {
-  services,
-  technologies,
-  experiences,
-  testimonials,
-  projects
-};
+export { services, technologies, experiences, testimonials, projects };

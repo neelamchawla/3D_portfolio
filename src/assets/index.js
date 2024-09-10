@@ -1,5 +1,6 @@
 // ========================= general
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
+import logo from "./logo.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -42,6 +43,9 @@ import tech from "./company/tech.jpg";
 import carrent from "./carrent.png";
 import threejsPro from "./threejs-project.png";
 import Vite from "./Vite.png";
+import Animato from "./Animato.jpg";
+import Scroller from "./Scroller.png";
+import Github from "./tech/github.png";
 // import jobit from "./jobit.png";
 // import tripguide from "./tripguide.png";
 
@@ -83,6 +87,9 @@ export {
   carrent,
   threejsPro,
   Vite,
+  Animato,
+  Scroller,
+  Github,
   // jobit,
   // tripguide,
 };
