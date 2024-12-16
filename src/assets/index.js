@@ -1,5 +1,4 @@
 // ========================= general
-// import logo from "./logo.svg";
 import logo from "./logo.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
@@ -22,17 +21,11 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import next from "./tech/next.png";
 import sitecore from "./tech/sitecore.png";
-// import redux from "./tech/redux.png";
-// import canva from "./tech/canva.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 // ========================= experience
-// import meta from "./company/meta.png";
-// import shopify from "./company/shopify.png";
-// import starbucks from "./company/starbucks.png";
-// import tesla from "./company/tesla.png";
 import horizontal from "./company/horizontal.jpg";
 import openeyes from "./company/openeyes.jfif";
 import futurelink from "./company/futurelink.jfif";
@@ -47,14 +40,11 @@ import Animato from "./projects/Animato.jpg";
 import Scroller from "./projects/Scroller.png";
 import Github from "./tech/github.png";
 import Iphone from "./projects/iphone.png";
-// import jobit from "./jobit.png";
-// import tripguide from "./tripguide.png";
 
 export {
   logo,
   backend,
   creator,
-  // canva,
   mobile,
   web,
   github,
@@ -72,14 +62,9 @@ export {
   reactjs,
   next,
   sitecore,
-  // redux,
   tailwind,
   typescript,
   threejs,
-  // meta,
-  // shopify,
-  // starbucks,
-  // tesla,
   horizontal,
   openeyes,
   futurelink,
@@ -92,6 +77,4 @@ export {
   Iphone,
   Scroller,
   Github,
-  // jobit,
-  // tripguide,
 };
