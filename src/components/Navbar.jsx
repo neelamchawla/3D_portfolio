@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center w-[70%]"
+          className="flex items-center w-[70%] pl-3 md:pl-0"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -66,7 +66,7 @@ const Navbar = () => {
         </ul>
 
         {/* small device - Toggle */}
-        <div className="md:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center pr-3 md:pr-0">
           <img
             src={toggle ? close : menu}
             alt="menu"

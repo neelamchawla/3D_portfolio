@@ -40,12 +40,13 @@ import codezeros from "./company/codezeros.jfif";
 import tech from "./company/tech.jpg";
 
 // ========================= projects
-import carrent from "./carrent.png";
-import threejsPro from "./threejs-project.png";
-import Vite from "./Vite.png";
-import Animato from "./Animato.jpg";
-import Scroller from "./Scroller.png";
+import carrent from "./projects/carrent.png";
+import threejsPro from "./projects/threejs-project.png";
+import Vite from "./projects/Vite.png";
+import Animato from "./projects/Animato.jpg";
+import Scroller from "./projects/Scroller.png";
 import Github from "./tech/github.png";
+import Iphone from "./projects/iphone.png";
 // import jobit from "./jobit.png";
 // import tripguide from "./tripguide.png";
 
@@ -88,6 +89,7 @@ export {
   threejsPro,
   Vite,
   Animato,
+  Iphone,
   Scroller,
   Github,
   // jobit,

@@ -33,6 +33,7 @@ import {
   threejsPro,
   Vite,
   Animato,
+  Iphone,
   Scroller,
   Github,
   // jobit,
@@ -211,6 +212,22 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
+      "I had the pleasure of working with Neelam on different projects, where their expertise in NextJs, CSS consistently exceeded expectations. Neelam is not only technically proficient but also a great team player, always willing to support colleagues and clients with insightful solutions.",
+    name: "Jay Thakkar",
+    designation: "Senior Software Engineer",
+    company: "Horizontal Digital",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
+  },
+  {
+    testimonial:
+      "I had the opportunity to work closely with Neelam on multiple projects where I handled the backend and she managed the frontend development. Her expertise in React.js and front-end technologies was instrumental in delivering seamless, high-performance web applications. Neelam has a natural ability to translate complex designs into smooth, user-friendly interfaces, and her focus on UI/UX ensured that the end-users always had an intuitive experience. What sets Neelam apart is her efficiency in building scalable, responsive components and optimizing them for performance. Her strong grasp of JavaScript, TypeScript, and API integration made our collaboration seamless, with smooth data flow and well-synchronized front-to-back-end functionality. She’s a proactive team player who consistently contributes innovative solutions to meet project goals. Working with her was a pleasure, and I’d highly recommend her for any front-end development role.",
+    name: "Dhruvi Patel",
+    designation: "DX Engineer",
+    company: "Horizontal Digital",
+    image: "https://randomuser.me/api/portraits/women/8.jpg",
+  },
+  {
+    testimonial:
       "Working with Neelam on the same team has been a great experience. She is highly skilled in front-end development, especially with Next JS and Sitecore. She consistently delivers outstanding results, demonstrating excellent problem-solving skills and a commitment to achieving goals. Her professionalism, dedication, and collaborative spirit make her an invaluable asset to any project. Neelam's innovative solutions and insights greatly enhance our team's performance. I highly recommend her for any team or project!!",
     name: "Rahul Kumawat",
     designation: "DX Engineer",
@@ -223,7 +240,7 @@ const testimonials = [
     name: "Aalap Desai",
     designation: "Talent Acquisition Manager",
     company: "Horizontal Digital",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
+    image: "https://randomuser.me/api/portraits/men/9.jpg",
   },
   {
     testimonial:
@@ -272,6 +289,27 @@ const projects = [
     ],
     image: Animato,
     source_code_link: "https://animato-shoe.netlify.app/",
+  },
+  {
+    name: "Iphone",
+    description:
+      "In this project, I have introduced 3D Iphone selection , with custom video carousel display.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GSAP",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: Iphone,
+    source_code_link: "https://iphone15pro-demo.netlify.app/",
   },
   {
     name: "Let's Do It - ThreeJs",
