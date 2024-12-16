@@ -9,7 +9,6 @@ import {
   css,
   reactjs,
   next,
-  // redux,
   tailwind,
   nodejs,
   mongodb,
@@ -17,13 +16,6 @@ import {
   figma,
   threejs,
   sitecore,
-  // canva,
-  // docker,
-
-  // meta,
-  // starbucks,
-  // tesla,
-  // shopify,
   horizontal,
   openeyes,
   futurelink,
@@ -36,8 +28,6 @@ import {
   Iphone,
   Scroller,
   Github,
-  // jobit,
-  // tripguide,
 } from "../assets/index.js";
 
 export const navLinks = [
@@ -107,10 +97,6 @@ const technologies = [
     name: "NextJs",
     icon: next,
   },
-  // {
-  //   name: "Redux Toolkit",
-  //   icon: redux,
-  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
