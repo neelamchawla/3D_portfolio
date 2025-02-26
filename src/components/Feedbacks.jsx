@@ -23,7 +23,7 @@ const FeedbackCard = ({
 }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] min-h-[464px] h-[464px] w-full"
+    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] min-h-[464px] h-[464px] w-full testimonialCard"
   >
     <p className="text-white font-black text-[48px]">&quot;</p>
 
@@ -60,7 +60,7 @@ const ReadMore = ({ children }) => {
   };
 
   return (
-    <p className="text">
+    <p className="text overflow-y-auto h-64">
       {isReadMore ? text.slice(0, 150) : text}
       <span onClick={toggleReadMore} className="read-or-hide">
         {isReadMore ? "...read more" : " show less"}
