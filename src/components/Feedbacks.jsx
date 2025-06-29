@@ -29,7 +29,7 @@ const FeedbackCard = ({
     <p className="text-white font-black text-[48px]">&quot;</p>
 
     <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">
+      <p className="text-white tracking-wider px-2 text-[18px]">
         <ReadMore>{testimonial}</ReadMore>
       </p>
 
@@ -62,7 +62,7 @@ const ReadMore = ({ children }) => {
 
   return (
     <p className="text overflow-y-auto h-64">
-      {isReadMore ? text.slice(0, 150) : text}
+      {isReadMore ? text.slice(0, 190) : text}
       <span onClick={toggleReadMore} className="read-or-hide">
         {isReadMore ? "...read more" : " show less"}
       </span>
@@ -120,7 +120,7 @@ const Feedbacks = () => {
         >
           <motion.div variants={textVariant()}>
             <p className={styles.sectionSubText}>What others say</p>
-            <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+            <h2 className={styles.sectionHeadText}>Testimonials</h2>
           </motion.div>
         </div>
         <div className={`-mt-20 pb-14 ${styles.paddingX}`}>

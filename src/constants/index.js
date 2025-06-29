@@ -1,14 +1,12 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+  reactNative,
   javascript,
   typescript,
   html,
   css,
   reactjs,
   next,
+  nextJsLogo,
   tailwind,
   nodejs,
   mongodb,
@@ -19,8 +17,6 @@ import {
   horizontal,
   openeyes,
   futurelink,
-  // codezeros,
-  // tech,
   carrent,
   threejsPro,
   Vite,
@@ -55,20 +51,24 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Next JS",
+    Description: "Full Stack",
+    icon: nextJsLogo,
   },
   {
-    title: "React.Js Developer",
-    icon: mobile,
+    title: "React JS",
+    Description: "Front End",
+    icon: reactjs,
   },
   {
-    title: "Node.Js Developer",
-    icon: creator,
+    title: "Node JS",
+    Description: "Back End",
+    icon: nodejs,
   },
   {
-    title: "Video / Image Creator",
-    icon: backend,
+    title: "React Native",
+    Description: "Mobile App",
+    icon: reactNative,
   },
 ];
 
@@ -94,7 +94,7 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "NextJs",
+    name: "Next JS",
     icon: next,
   },
   {
@@ -264,8 +264,8 @@ const testimonials = [
     testimonial:
       "Neelam is an incredibly productive and multi-skilled individual with extensive knowledge. Working with Neelam has been a pleasure due to her dedication to delivering outstanding results. Neelam has showcased her expertise in technologies like React and Angular for front-end development and PHP Laravel for back-end development. Our collaboration on an online Surveys Application based on React was a testament to her technical prowess and teamwork. Neelam's professionalism, expertise, and commitment make her a valuable asset to any team or project.",
     name: "Aaradhana Mulik",
-    designation: "B2B Content | Content Marketing | Corporate Communications",
-    company: "",
+    designation: "Associate Manager - Content & Communications",
+    company: "Ascendion",
     image: "https://randomuser.me/api/portraits/women/1.jpg",
   },
 ];

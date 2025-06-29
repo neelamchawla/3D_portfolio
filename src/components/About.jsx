@@ -36,6 +36,10 @@ const ServiceCard = ({ index, title, icon }) => (
           transformStyle: "preserve-3d",
         }}
       >
+        <h3 className="text-white text-[20px] font-bold py-6 text-center">
+          {services[index].Description}
+        </h3>
+
         <div
           className="flex justify-evenly items-center"
           style={{
@@ -48,12 +52,12 @@ const ServiceCard = ({ index, title, icon }) => (
               role="img"
               aria-label="img"
               alt="web-development"
-              className="w-16 h-16 object-contain"
+              className="w-[170px] h-[170px] object-contain"
             />
           </span>
         </div>
 
-        <h3 className="text-white text-[20px] font-bold pt-8 text-center">
+        <h3 className="text-white text-[20px] font-bold py-6 text-center">
           {title}
         </h3>
       </Tilt>
@@ -97,20 +101,25 @@ const About = () => {
     <div ref={aboutRef}>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
 
       <motion.div className="flex flex-row items-center justify-center">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] pr-8"
+          className="mt-4 text-justify text-secondary text-[17px] max-w-3xl leading-[30px] pr-8"
         >
-          I&apos;m a skilled software developer with experience in TypeScript
-          and JavaScript, and expertise in frameworks like React.Js, Next.Js,
-          Node.Js, and Three.js. I&apos;m a quick learner and collaborate
-          closely with clients to create efficient, scalable, and user-friendly
-          solutions that solve real-world problems. Let&apos;s work together to
-          bring your ideas to life!
+          I am a dedicated software developer with strong expertise in
+          TypeScript and JavaScript, specializing in modern frameworks such as
+          React.js, Next.js, Node.js, Three.js, GSAP and React Native.
+          <br />
+          I have experience in both web and mobile application development,
+          delivering cross-platform solutions that are efficient, scalable, and
+          user-friendly.
+          <br />
+          My focus is on building high-performance applications that address
+          real-world needs and drive meaningful results. Let&apos;s work
+          together to bring your ideas to life.
         </motion.p>
 
         <div className="gradient-border" id="box">

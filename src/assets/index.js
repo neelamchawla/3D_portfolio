@@ -1,12 +1,15 @@
+// ========================= services
+import reactNative from "./tech/reactNative.png";
+import nextJsLogo from "./tech/nextjs-sm.png";
+import creator from "./creator.png";
+import web from "./web.png";
+import menu from "./menu.svg";
+
 // ========================= general
 import logo from "./logo.png";
-import backend from "./backend.png";
-import creator from "./creator.png";
 import mobile from "./mobile.png";
-import web from "./web.png";
 import github from "./github.png";
 import link from "./link.png";
-import menu from "./menu.svg";
 import close from "./close.svg";
 import MyPic from "./my_pic.png";
 
@@ -44,7 +47,8 @@ import Iphone from "./projects/iphone.png";
 
 export {
   logo,
-  backend,
+  reactNative,
+  nextJsLogo,
   creator,
   mobile,
   web,
