@@ -63,6 +63,12 @@ const App = () => {
         </div>
       </div>
 
+      <footer className="w-full flex justify-center items-center p-4 bg-[#020024] text-white">
+        <p className="text-center">
+          &copy; {new Date().getFullYear()} Neelam Ramrakhiani. All rights
+          reserved.
+        </p>
+      </footer>
       {showBackToTop && (
         <button
           className="fixed bottom-4 right-4 p-2 shadow cursor-pointer backToTop"

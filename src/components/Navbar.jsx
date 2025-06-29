@@ -27,15 +27,14 @@ const Navbar = () => {
   return (
     <nav
       className={`
-      sm:px-2 md:px-6
-      w-full flex items-center pt-4 fixed -top-[28px] z-20
+      sm:px-2 md:px-6 w-full md:w-11/12 flex items-center pt-4 fixed -top-[28px] md:top-5 z-20 mx-0 md:mx-20
       ${
         scrolled
-          ? "bg-[#050816e6] rounded-br-3xl rounded-bl-3xl shadow-lg shadow-indigo-500/50"
+          ? "bg-[#050816e6] rounded-sm md:rounded-full shadow-lg shadow-indigo-500/50"
           : "bg-transparent"
       }`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center h-[5rem] max-w-7xl mx-auto">
         <Link
           to="/"
           className="flex items-center w-[70%] pl-3 md:pl-0"
@@ -51,7 +50,7 @@ const Navbar = () => {
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Neelam&nbsp;
-            <span className="sm:block hidden">| Software Developer</span>
+            <span className="max-md:block hidden">| Software Developer</span>
           </p>
         </Link>
 

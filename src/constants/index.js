@@ -19,8 +19,8 @@ import {
   horizontal,
   openeyes,
   futurelink,
-  codezeros,
-  tech,
+  // codezeros,
+  // tech,
   carrent,
   threejsPro,
   Vite,
@@ -196,6 +196,22 @@ const experiences = [
 ];
 
 const testimonials = [
+  {
+    testimonial:
+      "Neelam is a very hard working candidate. Her dedication and commitment towards solving complex problems is unique. Her attention to details for a given task is exceptional and that is what makes her outstanding.",
+    name: "Debtanu Biswas",
+    designation: "Senior Tech Lead",
+    company: "Horizontal Digital",
+    image: "https://randomuser.me/api/portraits/men/17.jpg",
+  },
+  {
+    testimonial:
+      "Working with Neelam has been a great experience. She is proactive, detail-oriented, and always ready to support the team. Her collaborative mindset makes her an asset to any project.",
+    name: "Akash Savalagi",
+    designation: "Tech Lead",
+    company: "Horizontal Digital",
+    image: "https://randomuser.me/api/portraits/men/19.jpg",
+  },
   {
     testimonial:
       "I had the pleasure of working with Neelam on different projects, where their expertise in NextJs, CSS consistently exceeded expectations. Neelam is not only technically proficient but also a great team player, always willing to support colleagues and clients with insightful solutions.",

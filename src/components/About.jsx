@@ -14,12 +14,16 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { useAnimeContext } from "../context/animeContext.jsx";
 import { gsap, ScrollTrigger } from "gsap/all";
 
+import { MyPic } from "../assets/index.js";
+
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-[250px]  p-[1px] rounded-[20px] shadow-card"
     >
+      <div class="animated-border-box-glow"></div>
+
       <Tilt
         className="flex min-h-[280px] w-[250px] content-center items-center justify-center rounded-[20px] bg-gradient-to-r from-violet-500 to-fuchsia-500 flex-col"
         options={{
@@ -96,17 +100,29 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I&apos;m a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React.Js, Next.Js, Node.Js,
-        and Three.js. I&apos;m a quick learner and collaborate closely with
-        clients to create efficient, scalable, and user-friendly solutions that
-        solve real-world problems. Let&apos;s work together to bring your ideas
-        to life!
-      </motion.p>
+      <motion.div className="flex flex-row items-center justify-center">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] pr-8"
+        >
+          I&apos;m a skilled software developer with experience in TypeScript
+          and JavaScript, and expertise in frameworks like React.Js, Next.Js,
+          Node.Js, and Three.js. I&apos;m a quick learner and collaborate
+          closely with clients to create efficient, scalable, and user-friendly
+          solutions that solve real-world problems. Let&apos;s work together to
+          bring your ideas to life!
+        </motion.p>
+
+        <div className="gradient-border" id="box">
+          <img
+            src={MyPic}
+            role="img"
+            aria-label="img"
+            alt="my_pic"
+            className="object-contain"
+          />
+        </div>
+      </motion.div>
 
       <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (

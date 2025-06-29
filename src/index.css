@@ -279,3 +279,116 @@
   --a: 15turn; 
   transition: --i 0s,--a 170s linear;
 }
+
+/*// Glow Border Animation //*/
+.animated-border-box, .animated-border-box-glow{
+  max-height: 200px;
+  max-width: 250px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden; 
+  z-index: 0;
+  /* Border Radius */
+	border-radius: 10px;
+}
+
+.animated-border-box-glow{
+  overflow: hidden;
+  /* Glow Blur */
+  filter: blur(20px);
+}
+
+.animated-border-box:before, .animated-border-box-glow:before {
+  content: '';
+  z-index: -2;
+  text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+	width: 99999px;
+	height: 99999px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+  /*border color, change middle color*/
+	background-image: conic-gradient(rgba(0,0,0,0), #1976ed, rgba(0,0,0,0) 25%);
+  /* change speed here */
+	animation: rotate 4s linear infinite;
+}
+
+.animated-border-box:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+  /* border width */
+	left: 5px;
+	top: 5px;
+  /* double the px from the border width left */
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+  /*bg color*/
+	background: #292a2e;
+  /*box border radius*/
+	border-radius: 7px;
+}
+
+@keyframes rotate {
+	100% {
+		transform: translate(-50%, -50%) rotate(1turn);
+	}
+}
+
+/* Gradient border */
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 400px;
+  height: 200px; */
+  /* color: white; */
+  /* font-family: 'Raleway';
+  font-size: 2.5rem; */
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1d1f20b8;
+  /* background: #1D1F20; */
+  border-top-left-radius: 120px 178%;
+  border-top-right-radius: 40% 103%;
+  border-bottom-left-radius: 350px 80px;
+  border-bottom-right-radius: 61% 49%;
+  position: relative;
+  /* border-radius: var(--borderWidth); */
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  /* border-radius: calc(2 * var(--borderWidth)); */
+  border-top-left-radius: 120px 178%;
+  border-top-right-radius: 40% 103%;
+  border-bottom-left-radius: 350px 80px;
+  border-bottom-right-radius: 61% 49%;
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+

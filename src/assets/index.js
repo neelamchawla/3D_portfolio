@@ -8,6 +8,7 @@ import github from "./github.png";
 import link from "./link.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import MyPic from "./my_pic.png";
 
 // ========================= tech - balls
 import css from "./tech/css.png";
@@ -56,6 +57,7 @@ export {
   figma,
   git,
   html,
+  MyPic,
   javascript,
   mongodb,
   nodejs,
