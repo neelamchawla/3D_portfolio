@@ -29,7 +29,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full md:min-w-full min-h-[26.5em] min-w-[31em]"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-[80%] md:min-w-full min-h-[26.5em] min-w-[31em]"
         style={{
           boxShadow: "0 48px 60px 0 rgba(2,14,26,.24)",
           transformStyle: "preserve-3d",
@@ -56,7 +56,7 @@ const ProjectCard = ({
         </a>
 
         <div
-          className="mt-5"
+          className="mt-5 px-3 pb-5"
           style={{
             transform: "translateZ(60px)",
           }}
@@ -67,7 +67,7 @@ const ProjectCard = ({
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-2 absolute bottom-5">
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
@@ -135,7 +135,7 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7 justify-center md:justify-start">
+      <div className="mt-20 flex flex-wrap gap-7 justify-center justify-self-center	md:justify-start">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

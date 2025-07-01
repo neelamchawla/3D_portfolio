@@ -22,7 +22,7 @@ const ServiceCard = ({ index, title, icon }) => (
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-[250px]  p-[1px] rounded-[20px] shadow-card"
     >
-      <div class="animated-border-box-glow"></div>
+      <div className="animated-border-box-glow"></div>
 
       <Tilt
         className="flex min-h-[280px] w-[250px] content-center items-center justify-center rounded-[20px] bg-gradient-to-r from-violet-500 to-fuchsia-500 flex-col"
@@ -104,16 +104,16 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
 
-      <motion.div className="flex flex-row items-center justify-center">
+      <motion.div className="flex flex-col md:flex-row items-center justify-center">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-4 text-justify text-secondary text-[17px] max-w-3xl leading-[30px] pr-8"
+          className="mt-4 text-justify text-secondary text-[17px] max-w-3xl leading-[30px] pb-8 md:pr-8"
         >
-          I am a dedicated software developer with strong expertise in
+          I am a dedicated Software Developer with strong expertise in
           TypeScript and JavaScript, specializing in modern frameworks such as
-          React.js, Next.js, Node.js, Three.js, GSAP and React Native.
+          React.js, Next.js, Node.js, Three.js, GSAP, Expo and React Native.
           <br />
-          I have experience in both web and mobile application development,
+          I have experience in both Web and Mobile Application development,
           delivering cross-platform solutions that are efficient, scalable, and
           user-friendly.
           <br />
@@ -133,7 +133,10 @@ const About = () => {
         </div>
       </motion.div>
 
-      <div className="mt-20 flex flex-wrap gap-10 justify-center">
+      <div
+        id="Service-Card"
+        className="mt-20 flex flex-wrap gap-10 justify-center"
+      >
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

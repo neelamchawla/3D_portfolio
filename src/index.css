@@ -13,8 +13,13 @@
   color-scheme: dark;
 }
 
-nav {
+nav,
+#Hero-arrow {
   justify-self: anchor-center;
+}
+
+#Service-Card {
+  text-align: -webkit-center;
 }
 
 .hash-span {
@@ -395,4 +400,3 @@ nav {
 		background-position: 0% 50%;
 	}
 }
-

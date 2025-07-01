@@ -48,7 +48,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary" ref={appRef}>
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <div
+          id="home"
+          className="bg-hero-pattern bg-cover bg-no-repeat bg-center"
+        >
           <Navbar />
           <Hero />
         </div>
@@ -57,7 +60,7 @@ const App = () => {
         <Tech />
         <Works />
         <Feedbacks />
-        <div className="relative z-0">
+        <div id="contact" className="relative z-0">
           <Contact />
           <StarsCanvas />
         </div>
@@ -71,7 +74,7 @@ const App = () => {
       </footer>
       {showBackToTop && (
         <button
-          className="fixed bottom-4 right-4 p-2 shadow cursor-pointer backToTop"
+          className="fixed bottom-36 right-8 p-2 shadow cursor-pointer backToTop"
           onClick={handleBackToTop}
         >
           <BsArrowUp />

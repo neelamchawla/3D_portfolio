@@ -12,17 +12,39 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(scrollTop > 100);
+
+      // Scrollspy Logic:
+      const offset = 100; // adjust for your navbar height
+      let currentSection = "";
+
+      navLinks.forEach((nav) => {
+        const section = document.getElementById(nav.id);
+        if (section) {
+          const sectionTop = section.offsetTop - offset;
+          const sectionHeight = section.offsetHeight;
+
+          if (
+            scrollTop >= sectionTop &&
+            scrollTop < sectionTop + sectionHeight
+          ) {
+            currentSection = nav.title;
+          }
+        }
+      });
+
+      setActive(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (title) => {
+    setActive(title);
+    setToggle(false);
+  };
 
   return (
     <nav
@@ -55,22 +77,25 @@ const Navbar = () => {
           </p>
         </Link>
 
+        {/* Desktop Menu */}
         <ul className="list-none hidden md:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
+                active === nav.title
+                  ? "text-amber-400 underline underline-offset-8"
+                  : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => handleNavClick(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
 
-        {/* small device - Toggle */}
-        <div className="md:hidden flex flex-1 justify-end items-center pr-3 md:pr-0">
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden cursor-pointer flex flex-1 justify-end items-center pr-3 md:pr-0">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -81,19 +106,18 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-[5.7rem] right-0 mx-4 my-2 min-w-[80%] h-[80vh] z-10 rounded-xl`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+            <ul className="list-none flex justify-center items-start flex-1 flex-col gap-24">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                  className={`font-poppins font-medium cursor-pointer text-5xl hover:text-white ${
+                    active === nav.title
+                      ? "text-amber-400 underline underline-offset-8"
+                      : "text-secondary"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
+                  onClick={() => handleNavClick(nav.title)}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>

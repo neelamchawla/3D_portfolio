@@ -1,29 +1,36 @@
 import {
+  // services
+  reactjs,
+  nodejs,
   reactNative,
-  javascript,
-  typescript,
+  nextJsLogo,
+  // tech
   html,
   css,
-  reactjs,
+  javascript,
+  typescript,
   next,
-  nextJsLogo,
   tailwind,
-  nodejs,
   mongodb,
+  threejs,
   git,
   figma,
-  threejs,
   sitecore,
+  // experiences
   horizontal,
   openeyes,
   futurelink,
-  carrent,
-  threejsPro,
-  Vite,
+  // projects
   Animato,
   Iphone,
+  threejsPro,
+  Vite,
   Scroller,
-  Github,
+  // carrent,
+  SpaceX,
+  MovieLand,
+  Projects,
+  LinkedIn,
 } from "../assets/index.js";
 
 export const navLinks = [
@@ -51,11 +58,6 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Next JS",
-    Description: "Full Stack",
-    icon: nextJsLogo,
-  },
-  {
     title: "React JS",
     Description: "Front End",
     icon: reactjs,
@@ -69,6 +71,11 @@ const services = [
     title: "React Native",
     Description: "Mobile App",
     icon: reactNative,
+  },
+  {
+    title: "Next JS",
+    Description: "Full Stack",
+    icon: nextJsLogo,
   },
 ];
 
@@ -293,7 +300,7 @@ const projects = [
     source_code_link: "https://animato-shoe.netlify.app/",
   },
   {
-    name: "Iphone",
+    name: "iPhone",
     description:
       "In this project, I have introduced 3D Iphone selection , with custom video carousel display.",
     tags: [
@@ -314,7 +321,7 @@ const projects = [
     source_code_link: "https://iphone15pro-demo.netlify.app/",
   },
   {
-    name: "Let's Do It - ThreeJs",
+    name: "Let's Do It - Three.JS",
     description:
       "Web application that enables users to pick colors, choose logo and search for logo with AI generated prompt for 3D T-Shirt.",
     tags: [
@@ -376,17 +383,38 @@ const projects = [
     image: Scroller,
     source_code_link: "https://animate-scroller.netlify.app/",
   },
+  // {
+  //   name: "Car Rent",
+  //   description:
+  //     "Web-based platform that allows users to search, and manage car rentals, providing a convenient transportation.",
+  //   tags: [
+  //     {
+  //       name: "react + Ts",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "next.js",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "tailwind",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: carrent,
+  //   source_code_link: "https://github.com/",
+  // },
   {
-    name: "Car Rent",
+    name: "SpaceX",
     description:
-      "Web-based platform that allows users to search, and manage car rentals, providing a convenient transportation.",
+      "Web-based platform that allows users to explore the animation on scrolling.",
     tags: [
       {
         name: "react + Ts",
         color: "blue-text-gradient",
       },
       {
-        name: "next.js",
+        name: "framer motion",
         color: "green-text-gradient",
       },
       {
@@ -394,8 +422,29 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: SpaceX,
+    source_code_link: "https://neelamchawla.github.io/spaceX/",
+  },
+  {
+    name: "MovieLand",
+    description:
+      "Web-based platform that allows users to search for details like Year, Genre of any hollywood Movies.",
+    tags: [
+      {
+        name: "react + Ts",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "framer motion",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: MovieLand,
+    source_code_link: "https://moviezland.netlify.app/",
   },
   {
     name: "More Projects....",
@@ -414,8 +463,28 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: Github,
+    image: Projects,
     source_code_link: "https://github.com/",
+  },
+  {
+    name: "LinkedIn Profile",
+    description: "Explore more about me, on my LinkedIn profile.",
+    tags: [
+      {
+        name: "react + Ts",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "next.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "react native",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: LinkedIn,
+    source_code_link: "https://www.linkedin.com/in/neelam-r/",
   },
 ];
 

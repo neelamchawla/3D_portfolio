@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { Arrow } from "../assets/index.js";
 
 const Hero = () => {
+  const [isOpeningScreenVisible, setOpeningScreenVisible] = useState(true);
+  setTimeout(() => {
+    setOpeningScreenVisible(false);
+  }, 5000);
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -18,31 +25,44 @@ const Hero = () => {
             Hi, I&apos;m <span className="text-[#915EFF]">Neelam</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D Visuals, User <br className="sm:block hidden" />
-            Interfaces and Web Applications.
+            I develop 3D Visuals, User Interfaces,
+            <br className="sm:block hidden" />
+            Mobile & Web Applications.
           </p>
         </div>
       </div>
 
       <ComputersCanvas />
+      {isOpeningScreenVisible && (
+        <img
+          src={Arrow}
+          role="img"
+          aria-label="img"
+          alt="arrow"
+          id="Hero-arrow"
+          className="object-contain absolute top-[35em] animate-pulse"
+        />
+      )}
 
-      <div className="absolute xs:bottom-10 bottom-5 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 0.9,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
-        </a>
-      </div>
+      {!isOpeningScreenVisible && (
+        <div className="absolute xs:bottom-10 bottom-5 w-full flex justify-center items-center">
+          <a href="#about">
+            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+              <motion.div
+                animate={{
+                  y: [0, 24, 0],
+                }}
+                transition={{
+                  duration: 0.9,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className="w-3 h-3 rounded-full bg-secondary mb-1"
+              />
+            </div>
+          </a>
+        </div>
+      )}
     </section>
   );
 };
