@@ -10,7 +10,8 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-
+import { saveAs } from "file-saver";
+import Resume from "../assets/general/Neelam R - Resume.pdf";
 import { useAnimeContext } from "../context/animeContext.jsx";
 import { gsap, ScrollTrigger } from "gsap/all";
 
@@ -97,6 +98,10 @@ const About = () => {
     });
   }, [setCurrentBG]);
 
+  const saveFile = () => {
+    saveAs(Resume, "Neelam R. - Resume.pdf");
+  };
+
   return (
     <div ref={aboutRef}>
       <motion.div variants={textVariant()}>
@@ -120,6 +125,39 @@ const About = () => {
           My focus is on building high-performance applications that address
           real-world needs and drive meaningful results. Let&apos;s work
           together to bring your ideas to life.
+          <>
+            <button className="c-h-button c-h-button--gooey" onClick={saveFile}>
+              {" "}
+              Download Resume
+              <div className="c-h-button__blobs">
+                <div />
+                <div />
+                <div />
+              </div>
+            </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              style={{ display: "block", height: 0, width: 0 }}
+            >
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur
+                    in="SourceGraphic"
+                    stdDeviation={10}
+                    result="blur"
+                  />
+                  <feColorMatrix
+                    in="blur"
+                    mode="matrix"
+                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                    result="goo"
+                  />
+                  <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+              </defs>
+            </svg>
+          </>
         </motion.p>
 
         <div className="gradient-border" id="box">
@@ -140,6 +178,17 @@ const About = () => {
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
+      </div>
+      <div className="mt-20 flex justify-center items-center">
+        <motion.div
+          ref={textRef}
+          variants={fadeIn("", "", 0.1, 1)}
+          className="!text-teal-300 text-[17px] max-w-3xl leading-[30px] text-center"
+        >
+          I am always eager to learn and adapt to new technologies and
+          methodologies, ensuring that I stay at the forefront of the
+          ever-evolving software development landscape.
+        </motion.div>
       </div>
     </div>
   );

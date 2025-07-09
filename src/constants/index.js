@@ -323,7 +323,7 @@ const projects = [
   {
     name: "Let's Do It - Three.JS",
     description:
-      "Web application that enables users to pick colors, choose logo and search for logo with AI generated prompt for 3D T-Shirt.",
+      "Web application that enables users to pick colors, choose logo and search for logo with AI generated prompt for T-Shirt.",
     tags: [
       {
         name: "react",

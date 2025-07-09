@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 // /* eslint-disable react/prop-types */
 // /* eslint-disable react-refresh/only-export-components */
@@ -116,14 +117,14 @@ const Feedbacks = () => {
     <div ref={feedbackRef}>
       <div className={`mt-12 bg-black-100 rounded-[20px]`}>
         <div
-          className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+          className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px] -mt-14`}
         >
           <motion.div variants={textVariant()}>
             <p className={styles.sectionSubText}>What others say</p>
             <h2 className={styles.sectionHeadText}>Testimonials</h2>
           </motion.div>
         </div>
-        <div className={`-mt-20 pb-14 ${styles.paddingX}`}>
+        <div className={`-mt-14 pb-14 ${styles.paddingX}`}>
           <Slider {...settings}>
             {testimonials.map((testimonial, index) => (
               <FeedbackCard

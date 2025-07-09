@@ -23,6 +23,13 @@ const ExperienceCard = ({ experience }) => {
       contentStyle={{
         background: "#1d1836",
         color: "#fff",
+        animation: "running",
+        animationName: "fadeIn",
+        animationDuration: "1s",
+        animationTimingFunction: "ease-in-out",
+        animationFillMode: "forwards",
+        animationIterationCount: "1",
+        animationDelay: "3s",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}

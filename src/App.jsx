@@ -10,6 +10,7 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  FloatingButton,
 } from "./components";
 
 import { useAnimeContext } from "./context/animeContext.jsx";
@@ -41,20 +42,58 @@ const App = () => {
     };
   }, []);
 
+  const [showAlt, setShowAlt] = useState(false);
+  const [prevY, setPrevY] = useState(0);
+
+  const handleMouseMove = (e) => {
+    const currentY = e.clientY;
+    if (currentY > prevY) {
+      // Mouse moved down
+      setShowAlt(true);
+    } else if (currentY < prevY) {
+      // Mouse moved up
+      setShowAlt(false);
+    }
+    setPrevY(currentY);
+  };
+
   const handleBackToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary" ref={appRef}>
+      <div id="main-wrapper" className="relative z-0 bg-primary" ref={appRef}>
         <div
           id="home"
-          className="bg-hero-pattern bg-cover bg-no-repeat bg-center"
+          // className="bg-hero-pattern hover:bg-hero-pattern-alt bg-cover bg-no-repeat bg-center"
+          className="relative w-full overflow-hidden group"
+          onMouseMove={handleMouseMove}
         >
+          {/* Default background image */}
+          {/* <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat transition-opacity duration-700 group-hover:opacity-0"></div> */}
+
+          {/* Hover background image */}
+          {/* <div className="absolute inset-0 bg-hero-pattern-alt bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-700 group-hover:opacity-100"></div> */}
+
+          {/* Background 1 */}
+          <div
+            className={`absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat transition-opacity duration-700 ${
+              showAlt ? "opacity-0" : "opacity-100"
+            }`}
+          />
+
+          {/* Background 2 */}
+          <div
+            className={`absolute inset-0 bg-hero-pattern-alt bg-cover bg-center bg-no-repeat transition-opacity duration-700 ${
+              showAlt ? "opacity-100" : "opacity-0"
+            }`}
+          />
+
           <Navbar />
           <Hero />
         </div>
+        <FloatingButton />
         <About />
         <Experience />
         <Tech />

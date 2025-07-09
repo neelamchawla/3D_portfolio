@@ -26,7 +26,8 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 // ========================= experience
-import horizontal from "./company/horizontal.jpg";
+import horizontal from "./company/horizontal.png";
+// import horizontal from "./company/horizontal.gif";
 import openeyes from "./company/openeyes.jfif";
 import futurelink from "./company/futurelink.jfif";
 import codezeros from "./company/codezeros.jfif";
